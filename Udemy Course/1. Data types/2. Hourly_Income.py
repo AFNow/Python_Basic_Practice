@@ -1,0 +1,6 @@
+print ('Укажите почасовую ставку')
+income: int = input ()
+print ('Укажите отработанные часы')
+hours: int = input ()
+profit = int(income) * int(hours)
+print (profit)
