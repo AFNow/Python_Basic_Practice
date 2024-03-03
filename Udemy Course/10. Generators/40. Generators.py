@@ -30,3 +30,12 @@ def genfibonacci(x): # Это аналогичная функция, но исп
     return genout
 print(list(genfibonacci(10000)))
 genfibonacci (10000)
+
+# Также одной из функций генераторов является команда next, которая возвращает записанное в последовательности генератора значение:
+def gen():
+    for item in range(0, 3):
+        yield item
+g = gen()
+print(next(g))
+print(next(g))
+print(next(g))
