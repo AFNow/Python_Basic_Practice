@@ -29,7 +29,7 @@ breakpoint()
     # Запускае последний завершенный скрипт из sys.last_traceback в режиме отладки
 
 # Debugger Commands - команды режима отладки:
-    # h(elp) [command]
+    # h(elp) [command] - Распечатка 
     # w(here)
     # d(own) [count]
     # u(p) [count]
