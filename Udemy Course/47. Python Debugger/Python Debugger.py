@@ -29,38 +29,36 @@ breakpoint()
     # Запускае последний завершенный скрипт из sys.last_traceback в режиме отладки
 
 # Debugger Commands - команды режима отладки:
-    # h(elp) [command] - Распечатка 
-    # w(here)
-    # d(own) [count]
-    # u(p) [count]
-    # b(reak) [([filename:]lineno | function) [, condition]]
-    # tbreak [([filename:]lineno | function) [, condition]]
-    # cl(ear) [filename:lineno | bpnumber ...]
-    # disable bpnumber [bpnumber ...]
-    # enable bpnumber [bpnumber ...]
-    # ignore bpnumber [count]
-    # condition bpnumber [condition]
-    # commands [bpnumber]
-    # s(tep)
-    # n(ext)
-    # unt(il) [lineno]
-    # r(eturn)
-    # c(ont(inue))
-    # j(ump) lineno
-    # l(ist) [first[, last]]
-    # a(rgs)
-    # p expression
-    # pp expression
-    # whatis expression
-    # source expression
-    # display [expression]
-    # undisplay [expression]
-    # interact
-    # alias [name [command]]
-    # unalias name
-    # ! statement
-    # run [args ...]
-    # restart [args ...]
-    # debug code
-    # retval
-    # q(uit)
+    # h(elp) [command] - Справка по всем командам, или по определенной команде.
+    # w(here) - печать работы всего стека, до указания текущего момента в процессе работы скрипта.
+    # d(own) [count] - перемещение вперед по стеку, для выполнения последующих строк скрипта
+    # u(p) [count] - перемещение назад по стеку, для выполнения прошлых строк скрипта
+    # b(reak) [([filename:]lineno | function) [, condition]] - остановка скрипта в текущей стадии, если указан аргумент lineno, иначе можно указать определенное место остановки
+    # tbreak [([filename:]lineno | function) [, condition]] - временная остановка, аналогичная предыдущей команде *** (требует дополнения)
+    # cl(ear) [filename:lineno | bpnumber ...] - очистка всех точек остановки скрипта, записанных в последовательности
+    # disable bpnumber [bpnumber ...] - отключает точку остановки при запуске в режиме отладки, но не удаляет ее из записи о точках остановки скрипта
+    # enable bpnumber [bpnumber ...] - включает точку остановки, отменяя команду выше
+    # ignore bpnumber [count] - позволяет игнорировать определенное количество точек остановки отладчика при работе скрипта
+    # condition bpnumber [condition] - позволяет включать и отключать работу счетчика из команды выше по методу True/False
+    # commands [bpnumber] - печатает список из точек, которые были проведены через счетчик bpnumber
+    # s(tep) - запуск текущей строки до запуска последующей
+    # n(ext) - запуск следующей строки
+    # unt(il) [lineno] - запуск до определенной строки (по номеру строки)
+    # r(eturn) - запуск до момента возврата функции
+    # c(ont(inue)) - продолжение работы до точки брейкпоинта
+    # j(ump) lineno - переход сразу к определенной строке для ее исполнения (не может быть исполнено в некоторых случаях)
+    # l(ist) [first[, last]] - выдает текущий код, или указанный в пределах аргумента
+    # a(rgs) - выдает принятые функцией аргументы
+    # p expression - аналогично print(), но является командой отладчика
+    # whatis expression - выдает тип функции 
+    # source expression - показывает исходный код функции
+    # display [expression] - показывает данные, которые фигурируют в конкретной функции в данный момент
+    # undisplay [expression] - скрывает данные функции
+    # interact - выдает все доступные для функции переменные, используемые ей в области SCOPE
+    # alias [name [command]] - позволяет назначить команде свое наименование для исполнения в отладчике
+    # unalias name - снимает назначение команде наименования    
+    # ! statement - *** (нужно проверить)
+    # run [args ...] - запуск отладчика
+    # restart [args ...] - перезапуск отладчика
+    # retval - выдает последние данные, котоыре были вовзращены функцией return 
+    # q(uit) - выход и завершение работы отладчика
