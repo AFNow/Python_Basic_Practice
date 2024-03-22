@@ -110,6 +110,7 @@ def black_jack():
                     player_bet = int(input('введите ставку:'))
                     continue
 
+
     def gameplay():
         def first_cards(): # Первая раздача карт
             global player_chips
