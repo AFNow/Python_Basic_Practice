@@ -1,10 +1,5 @@
-dictionary = {}
-count = 0
-while count < 3:
-    count += 1
-    key = input ('Название ключа: ')
-    value = input ('Его значение ')
-    dictionary[key] = value
-print (dictionary)
-key = input ('Название ключа запроса: ')
-print (dictionary.get(key, 'Такого ключа не найдено'))
+set1 = {1, 3, 6, 8, 10}
+set2= {1, 2, 5, 8, 7}
+set1.add(2)
+set3 = set1.intersection(set2)
+print(list(set3))
