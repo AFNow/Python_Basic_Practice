@@ -1,10 +1,9 @@
-integer1 = 100
-integer2 = 100
-integer3 = 150
-print (id (integer1))
-print (id (integer2))
-print (integer1 == integer2)
-integer2 += 50
-print (id (integer2))
-print (id (integer3))
-print (integer2 == integer3)
+list1 = [1,2,3,4,5]
+list2 = [1,2,3,4,5]
+list1id = id(list1)
+print (id(list1))
+list2id = id(list2)
+print (id(list2))
+print (id(list1) == id(list2))
+list1.append(6)
+print (int(id(list1)) == list1id)
