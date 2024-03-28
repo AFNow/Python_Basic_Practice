@@ -1,14 +1,7 @@
-def sum_a_b(a,b):
-    print (id (a))
-    a += 1
-    print (id(a))
-    print (id(b))
-    c = a+b
-    print (id(c))
-    return c
+def merge_lists_to_dict(list1, list2):
+    merged_dect = dict(zip(list1, list2))
+    return merged_dect
+l1 = [1,3,5,7,9]
+l2 = [2,4,6,8,10]
 
-num1 = 10
-num2 = 5
-print (sum_a_b(num1, num2))
-print (id(num1))
-print (id(num2))
+print (merge_lists_to_dict(l1,l2))
