@@ -1,5 +1,10 @@
-set1 = {1, 3, 6, 8, 10}
-set2= {1, 2, 5, 8, 7}
-set1.add(2)
-set3 = set1.intersection(set2)
-print(list(set3))
+integer1 = 100
+integer2 = 100
+integer3 = 150
+print (id (integer1))
+print (id (integer2))
+print (integer1 == integer2)
+integer2 += 50
+print (id (integer2))
+print (id (integer3))
+print (integer2 == integer3)
