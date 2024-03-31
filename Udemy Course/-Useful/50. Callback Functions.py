@@ -6,7 +6,7 @@ def number_info1(num):
 
 
 def is_happy(num):
-
+    
     '''
     #Square by 2 each of its digits.
     #Sum the squared digits.
