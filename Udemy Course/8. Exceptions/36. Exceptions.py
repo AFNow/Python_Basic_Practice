@@ -12,7 +12,7 @@
 # Исправить его можно таким образом:
 try:
     n1 = int(input('Введите число n1:'))
-    n2 = input('Введите число n2:')
+    n2 = int(input('Введите число n2:'))
     x = n1+n2
     print (x)
 except ValueError: # Может быть указан конкретный вид ошибки, или же общее except:, которое будет выдавать единый ответ на любые возникающие ошибки
@@ -44,3 +44,19 @@ def ask_for_int ():
             print ('Число введено')
             break
 ask_for_int ()
+
+# Генерация ошибок:
+def divide(a,b):
+    if a == 0 or  b == 0:
+        raise TypeError ("The argument can't be 0")
+    else:
+        return a/b
+
+try:
+    print (divide (6,2))
+except ZeroDivisionError as error:
+    print (error)
+except TypeError as error:
+    print (error)
+finally:
+    print ('end...')
