@@ -1,7 +1,11 @@
-def merge_lists_to_dict(list1, list2):
-    merged_dect = dict(zip(list1, list2))
-    return merged_dect
-prefixes = ['name','age','class','number','Rate']
-Info = ['Igor',12,'B','+82349223211','Good']
-
-print (merge_lists_to_dict(prefixes,Info))
+info = {'image_title': 'my_cat', 'image_id':123, 'addition': '456'}
+def image_info(i):
+    if len(i) != 2:
+        raise TypeError ("Info doesn't have 2 keys")
+    else:
+        return f"Image '{info['image_title']}' has id:{info['image_id']}"
+    
+try:
+    print (image_info(info))
+except TypeError as error:
+    print (error)

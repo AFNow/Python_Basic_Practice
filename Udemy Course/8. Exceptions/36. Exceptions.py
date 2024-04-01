@@ -53,7 +53,7 @@ def divide(a,b):
         return a/b
 
 try:
-    print (divide (6,2))
+    print (divide (2,0))
 except ZeroDivisionError as error:
     print (error)
 except TypeError as error:
