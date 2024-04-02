@@ -1,11 +1,9 @@
-info = {'image_title': 'my_cat', 'image_id':123, 'addition': '456'}
-def image_info(i):
-    if len(i) != 2:
-        raise TypeError ("Info doesn't have 2 keys")
-    else:
-        return f"Image '{info['image_title']}' has id:{info['image_id']}"
-    
-try:
-    print (image_info(info))
-except TypeError as error:
-    print (error)
+import time
+def count1m (num):
+    start = time.time()
+    while num < 1_000_000_000:
+        num += 1
+    end = time.time()
+    print (num)
+    print (f"Время выполнения :{end - start}")
+count1m (0)
