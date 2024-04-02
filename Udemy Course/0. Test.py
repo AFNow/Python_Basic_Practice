@@ -1,14 +1,2 @@
-info = {
-    'distance' : 0,
-    'speed' : 5,
-    'time' : 3
-}
-def route_info(info):
-    if ('distance' in info) and (type(info['distance']) != float) and (info['distance'] != 0):
-        print (f"The distance is {info['distance']} kilometers")
-    elif info.get('time') and info.get('speed'):
-        print (f"The distance is {info['speed'] * info['time']} kilometers")
-    else:
-        print ('No info available')
-
-route_info(info)
+image_res = ('1920', '1080')
+print (f"{image_res[0]} x {image_res[1]}") if len (image_res) == 2 else print ('Incorrect resolution')
