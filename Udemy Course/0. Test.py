@@ -1,28 +1,24 @@
-def dict_to_list():
-    dictionary = {
-    'name' : 'Dave',
-    'id'   : 6203,
-    'num'  : 73552,
-    1      : True
-    }
-    lst = []
-    for item in dictionary.items():
-        key, value = item
-        if type(key) == int:
-            key = key * 2
-        st = (key, value)
-        lst.append(st)
-    print (lst)
-dict_to_list()
-
-
-def filter_list(lst, data_type):
-    #end_lst = [item for item in lst if type(item) == data_type] # Example 1 in one codeline
-    end_lst = []
-    for item in lst:
-        if type(item) == data_type:
-            end_lst.append(item)  
-    print (end_lst)
-lst = [35, 11.2, True, False, 'Id', 22, 'name', 22.2]
-filter_list(lst, data_type=bool)
-
+def divide():
+    while True:
+        try:
+            num1 = input('First num: ')
+            num1 = int(num1)
+            num2 = input('Second num: ')
+            num2 = int(num2)
+            value = int(num1)/int(num2)
+            print (value)
+            answer = str(input('Continue? y/n '))
+            if answer == 'y':
+                continue
+            else:
+                break
+        except TypeError:
+                    print("It's not a num")
+                    continue
+        except ValueError:
+                    print("It's not a num")
+                    continue
+        except ZeroDivisionError:
+                    print("Zero division is unacceptable :<")
+                    continue
+divide()
