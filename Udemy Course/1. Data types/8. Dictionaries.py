@@ -32,4 +32,4 @@ def user_info(name, qty=0): # Функция распаковывает ключ
     if not qty:
         return f"{name} has no qty"
     return f"{name} has {qty}"
-print (user_info(**profile)) # Для распаковки используется оператор **
+print (user_info(**profile)) # Для распаковки используется оператор **, ограничением ивляется количество пунктов в словаре
