@@ -21,3 +21,15 @@ dictionary3 = {
 full_dict = dictionary2 | dictionary3
 print (full_dict)
 # Важность имеют последовательности их объединения, при повторяющихся ключах, их данные также перезаписываются
+
+# Dictionary Unpacking
+profile = {
+    'name' : 'Drew'
+    ,'qty'  : 50
+    }
+
+def user_info(name, qty=0): # Функция распаковывает ключи и данные словаря, назначая их на имена переменных
+    if not qty:
+        return f"{name} has no qty"
+    return f"{name} has {qty}"
+print (user_info(**profile)) # Для распаковки используется оператор **
