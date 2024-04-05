@@ -9,7 +9,9 @@ class NameOfClass(): # Пример синтаксиса
     def some_method(self):
         # Выполнение некоего действия
         print (self.parameter1)
-pass
+    @staticmethod # Статический метод позволяет использовать его без привязки к переменной атрибута класса self, то есть он будет применим к любому объекту класса
+    def some_method2(varuable1, varuable2):
+        return f"{varuable1}, {varuable2}"
 
 class Dog(): # Собака, порода etc. 
     # Class object attribute
