@@ -3,9 +3,11 @@
 # Эти методы работают как функции, которые используют информацию об объекте и сам объект для получения результата или изменения самого объекта
 # Пример:
 class NameOfClass(): # Пример синтаксиса
+    localclassvaruable = 0 # Локальная переменная класса изменяется только в пределах самого класса
     def __init__(self,parameter1, parameter2):
         self.parameter1 = parameter1
         self.parameter2 = parameter2
+        NameOfClass.localclassvaruable =+ 1 # В данном случае локальная переменная класса изменяется при создании нового атрибута класса
     def some_method(self):
         # Выполнение некоего действия
         print (self.parameter1)
