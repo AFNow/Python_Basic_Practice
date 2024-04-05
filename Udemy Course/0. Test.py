@@ -1,24 +1,15 @@
-def divide():
-    while True:
-        try:
-            num1 = input('First num: ')
-            num1 = int(num1)
-            num2 = input('Second num: ')
-            num2 = int(num2)
-            value = int(num1)/int(num2)
-            print (value)
-            answer = str(input('Continue? y/n '))
-            if answer == 'y':
-                continue
-            else:
-                break
-        except TypeError:
-                    print("It's not a num")
-                    continue
-        except ValueError:
-                    print("It's not a num")
-                    continue
-        except ZeroDivisionError:
-                    print("Zero division is unacceptable :<")
-                    continue
-divide()
+class Image:
+    def __init__(self, resolution, title, extension):
+        self.resolution = resolution
+        self.title = title
+        self.extension = extension
+    def __str__(self) -> str:
+        return f"{self.title}{self.extension}"    
+    def resize(self, size = '50x50'):
+        self.resolution = size
+
+image1 = Image('100x100', 'image1', '.png')
+print (image1.resolution, image1.title, image1.extension)
+image1.resize()
+print (image1.resolution)
+print (image1)
