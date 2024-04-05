@@ -24,3 +24,12 @@ def iterator(text):
         yield item
 for item in iterator('TEXT'):
     print (item)
+
+# Размер генератора в памяти
+from sys import getsizeof
+def squares_generator_size():
+    gen = (num * num for num in range(1_000_000))
+    print (f"{getsizeof(gen)} bytes")
+    gen_to_list = [num * num for num in range (1_000_000)]
+    print (f"{getsizeof(gen_to_list)} bytes")
+squares_generator_size()
