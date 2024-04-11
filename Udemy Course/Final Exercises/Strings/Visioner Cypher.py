@@ -1,11 +1,23 @@
 # Шифр Виженера - Функции для зашифровывания и расшифровывания сообщений.
 # https://inventwithpython.com/hacking/chapter19.html
 def VisionerCypher():
-    kirillic_alphabeth = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ1234567890'
-    latin_alphabeth = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'
+    kirillic_alphabeth = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'
+    latin_alphabeth = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     
     def encrypt(text, key, lang): # Шифровка текста
-        pass
+        result = ''
+        key *= len(text)// len(key) + 1
+        print (text)
+        print (key)
+        if lang == 'kirillic':
+            for key_item in key:
+                for text_item in text:
+                    letter = kirillic_alphabeth.find(text_item) + kirillic_alphabeth.find(key_item)
+                    print (letter)
+            pass
+        elif lang == 'latin':
+            pass
+
 
     def decrypt(text, key, lang): # Дешифровка текста
         pass
@@ -24,12 +36,14 @@ def VisionerCypher():
     def key_operand_check(text, lang): # Проверка операнда для работы шифра, ключ должен быть в такой же раскладке, что и текст
         key = input('Введите ключ: ')
         for item in key:
-            if lang == 'kirillic' and kirillic_alphabeth.find(item.upper()):
-                mode_check(text, key, lang)
-            elif lang == 'latin' and latin_alphabeth.find(item.upper()):
-                mode_check(text, key, lang)
+            if lang == 'kirillic' and kirillic_alphabeth.find(item.upper()[0]):
+                check = True
+            elif lang == 'latin' and latin_alphabeth.find(item.upper()[0]):
+                check = True
             else:
-                print ('Ключ и текст должны быть в одной алфавитной системе')
+                print ('**Ключ и текст должны быть в одной алфавитной системе**')
+        if check == True:
+            mode_check(text, key, lang)
     
     def cypher_operand_check(): # Проверка операнда для работы шифра, текст должен быть в такой же раскладке, что и ключ
         text = input ('Введите строку для шифровки/дешифровки: ')
