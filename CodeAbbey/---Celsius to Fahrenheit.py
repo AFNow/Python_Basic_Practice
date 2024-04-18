@@ -13,5 +13,3 @@ def FtoC():
     result = ' '.join(str(item) for item in answerslst)
     print (result)
 FtoC()
-
-#(Фаренгейт — 32) : 1,8 = Цельсий 

@@ -26,9 +26,3 @@ def arithmetic_progression():
     answer = ' '.join (str(item) for item in answers)
     print (answer)
 arithmetic_progression()
-
-#[ S_n = \frac{n}{2} \left(2a + (n - 1) \cdot d\right) ]
-#Где:
-#(S_n) - сумма первых (n) членов арифметической прогрессии.
-#(a) - первый член прогрессии.
-#(d) - разность между последовательными членами.
