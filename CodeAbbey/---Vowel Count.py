@@ -16,5 +16,19 @@ input = ['fnzdxccxdkpunjqsmnmpvdk xzr  eyjgpkzvmku nuszpy',
         'yrhpuulxiqf yixagycyzmudhe wvuet w ovl pk',
         'gf  h wolofgeuen bzlvvzne ddd ywjooafa nezm alcqmhkwy eyva',
         'e  qaccarhgkshiuhcpaakthib d lldd pmbz eiw bcxa']
-
-# Count the vowels in each line
+vowelsEng = ['a', 'o', 'u', 'i', 'e', 'y']
+def count_vowels(input):
+    vowels = 0
+    index = 0
+    counter = []
+    answer = ' '
+    while index != len(input):
+        for item in input[index]:
+            if item in vowelsEng:
+                vowels += 1
+        index += 1
+        counter.append(vowels)
+        vowels = 0
+    answer = ' '.join(str(item) for item in counter)
+    print (answer)
+count_vowels(input)
