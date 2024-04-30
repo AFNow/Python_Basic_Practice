@@ -1,1 +1,0 @@
-#https://www.codeabbey.com/index/task_view/modulo-and-time-difference--ru
