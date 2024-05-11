@@ -19,10 +19,8 @@ def arithmetic_progression():
         varuables.append(lst[index+1])
         varuables.append(lst[index+2])
         index += 3
-        #print (varuables)
         answers.append(round(arithmetic_progression_sum(varuables)))
         varuables = []
-        #print (answers)
     answer = ' '.join (str(item) for item in answers)
     print (answer)
 arithmetic_progression()
